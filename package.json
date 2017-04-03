@@ -1,0 +1,28 @@
+{
+  "name": "feedtrack",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "npm-run-all": "^4.0.2",
+    "postcss": "^5.2.16",
+    "postcss-cli": "^3.0.0",
+    "postcss-import": "^9.1.0",
+    "precss": "^1.4.0",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start":"npm-run-all --parallel start:*",
+    "build":"npm-run-all build:*",
+    "start:react": "react-scripts start",
+    "start:styles": "npm run build:styles -- --watch",
+    "build:styles": "./node_modules/.bin/postcss --config postcss.config.js src/styles/index.css -o src/index.css",
+    "build:react": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
