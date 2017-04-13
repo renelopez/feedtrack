@@ -4,10 +4,12 @@ import Routes from './routes';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import './index.css';
+import configureStore from'./configureStore';
 
 
 const MOUNT=document.getElementById('root');
 const renderApp=Comp => ReactDOM.render(Comp,MOUNT);
+const store =configureStore();
 
 if(module.hot){
     module.hot.accept('./routes',()=> {
@@ -15,4 +17,4 @@ if(module.hot){
         renderApp(<NextApp />);
     })
 }
-renderApp(<Routes />);
+renderApp(<Routes store={store} />);
