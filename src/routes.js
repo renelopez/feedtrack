@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 
 import FeedbackDashboard from './feedbacks/FeedbackDashboard/FeedbackDashboard';
-import CandidateDashboard from './candidates/CandidateDashboard/CandidateDashboard';
+import CandidateDashboardContainer from './candidates/components/CandidateDashboard/CandidateDashboardContainer';
 import withRouter from './hoc/withRouter';
 import withLayout from './hoc/withLayout';
 //
@@ -15,7 +15,7 @@ export const Routes = props => (
                    component={FeedbackDashboard} />
             <Route path="/candidates"
                    render={(renderProps) => (
-                       <CandidateDashboard {...props} {...renderProps} />
+                       <CandidateDashboardContainer {...props} {...renderProps} />
                    )} />
         </div>
 );
