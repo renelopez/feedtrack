@@ -1,7 +1,8 @@
 import * as types from './candidateActionTypes';
 import * as ajaxActions from './../../common/ajaxActions';
 import feedtrackApi from '../../api/mockFeedtrack';
-import {normalize} from 'normalizr';
+//import {normalize} from 'normalizr';
+import Immutable from 'immutable';
 import {candidateSchema,candidateListSchema} from '../schemas/candidateSchema';
 
 export function loadCandidatesSuccess(candidates) {
@@ -16,7 +17,9 @@ export function loadCandidates(){
     ajaxActions.beginAjaxCall();
     return function(dispatch){
         return feedtrackApi.getAllCandidates().then((candidates)=>{
-            dispatch(loadCandidatesSuccess(normalize(candidates,candidateListSchema)));
+            debugger;
+            let mapita=Immutable.fromJS(candidates);
+            dispatch(loadCandidatesSuccess(mapita));
         },(error)=>{
             dispatch(loadCandidatesFailure(error))
         })

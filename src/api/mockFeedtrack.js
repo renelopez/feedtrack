@@ -70,26 +70,26 @@ let positions=[
 ];
 let candidates=[
     {
-        id:1,
+        id:213342,
         name:'Rene Jezrael Lopez Cano',
         description:'We require a Senior Developer to lead our set of products from our company',
         skills:['Java','Spring','HTML5','Angular 2','Webpack'],
         positions:[1,4]
 
     },{
-        id:2,
+        id:234234234,
         name:'Mario Hou Rodriguez',
         description:'A developer with PUMP',
         skills:['Imitaciones','Pump it up','Produccion'],
         positions:[1,2]
     },{
-        id:3,
+        id:23423424,
         name:'Angel de Toluca',
         description:'MPF Ganador que mas quieres',
         skills:['Pump it up','Chilango','Albures'],
         positions:[3]
     },{
-        id:4,
+        id:23423432,
         name:'JonaLoco',
         description:'El mejor uberista que puedes encontrar',
         skills:['Uber','SCRUM Master','Programming'],

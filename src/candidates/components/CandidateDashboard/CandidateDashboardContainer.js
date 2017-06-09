@@ -30,14 +30,7 @@ class CandidateDashboardContainer extends React.Component{
             </tr>
             </thead>
             <tbody>
-            {this.props.candidates.map((candidate)=>{
-                return(
-                <tr>
-                    <td>{candidate.id}</td>
-                    <td>{candidate.name}</td>
-                    <td>{candidate.description}</td>
-                </tr>)
-            })}
+
             </tbody>
         </Table>
         )
@@ -46,7 +39,7 @@ class CandidateDashboardContainer extends React.Component{
 
 function mapStateToProps(state,ownProps){
     return {
-        candidates: getDashboardCandidates(state)
+       // candidates: getDashboardCandidates(state)
     }
 }
 

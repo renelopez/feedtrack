@@ -16,12 +16,14 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
+    "immutable": "^3.8.1",
     "npm-run-all": "^4.0.2",
     "postcss": "^5.2.16",
     "postcss-cli": "^3.0.0",
     "postcss-import": "^9.1.0",
     "precss": "^1.4.0",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "redux-immutable": "^4.0.0"
   },
   "scripts": {
     "start": "npm-run-all --parallel start:*",
