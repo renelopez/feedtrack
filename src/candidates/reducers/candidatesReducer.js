@@ -1,10 +1,12 @@
 import * as types from '../actions/candidateActionTypes';
 import Immutable from 'immutable';
 
-const candidatebyId = function(state = Immutable.Map, action) {
+const candidates = function(state=Immutable.List(), action) {
     switch(action.type) {
         case types.LOAD_CANDIDATES_SUCCESS:
-            return state.set('candidates',action.response);
+            debugger;
+            //state.set('candidates',action.response);
+            return Immutable.fromJS(action.response);
             break;
 
         default: {
@@ -13,6 +15,4 @@ const candidatebyId = function(state = Immutable.Map, action) {
     }
 };
 
-export default candidatebyId;
-
-//export const getCandidateById= (state,id) => state[id];
+export default candidates;

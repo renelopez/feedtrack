@@ -23,7 +23,8 @@
     "postcss-import": "^9.1.0",
     "precss": "^1.4.0",
     "react-scripts": "0.9.5",
-    "redux-immutable": "^4.0.0"
+    "redux-immutable": "^4.0.0",
+    "reselect": "^3.0.1"
   },
   "scripts": {
     "start": "npm-run-all --parallel start:*",

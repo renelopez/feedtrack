@@ -1,9 +1,9 @@
 //import { combineReducers } from 'redux';
 import { combineReducers } from 'redux-immutable';
-import candidates from './candidates/reducers/candidateRootReducer';
+import candidateRoot from './candidates/reducers/candidateRootReducer';
 
 const rootReducer = combineReducers({
-    candidates
+    candidateRoot
 });
 
 export default rootReducer;

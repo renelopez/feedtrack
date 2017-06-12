@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as candidateActions from '../../actions/candidateActions';
-import { getDashboardCandidates } from '../../reducers/candidateRootReducer';
+import { getDashboardCandidatesSelector } from '../../selectors/getDashboardCandidatesSelector';
 import {Table} from 'react-bootstrap';
 
 class CandidateDashboardContainer extends React.Component{
@@ -30,7 +30,15 @@ class CandidateDashboardContainer extends React.Component{
             </tr>
             </thead>
             <tbody>
-
+            {this.props.candidates.map((candidate)=>{
+                debugger;
+                return(
+                    <tr>
+                        <td>{candidate.id}</td>
+                        <td>{candidate.name}</td>
+                        <td>{candidate.description}</td>
+                    </tr>)
+            })}
             </tbody>
         </Table>
         )
@@ -38,8 +46,11 @@ class CandidateDashboardContainer extends React.Component{
 }
 
 function mapStateToProps(state,ownProps){
+    debugger;
+    let candidates=getDashboardCandidatesSelector(state)
+    //let candidates=state.get('candidateRoot').get('candidates') || {};
     return {
-       // candidates: getDashboardCandidates(state)
+        candidates: candidates
     }
 }
 
