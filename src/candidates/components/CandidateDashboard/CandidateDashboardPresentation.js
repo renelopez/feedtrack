@@ -1,12 +1,32 @@
 import React from 'react';
+import {Table,Button} from 'react-bootstrap';
+import {withToJS} from '../../../hoc/withToJS';
 
-
-export const CandidateDashboard = (props) => {
+const CandidateDashboard = ({candidates,onCreate,onEdit,onDelete}) => {
     return(
-        <div>
-            <h1>This is the Candidate Dashboard</h1>
-        </div>
+        <Table responsive>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th><Button bsStyle="success" onClick={onCreate}>Add New +</Button></th>
+            </tr>
+            </thead>
+            <tbody>
+            {candidates.map((candidate)=>{
+                return(
+                    <tr>
+                        <td>{candidate.id}</td>
+                        <td>{candidate.name}</td>
+                        <td>{candidate.description}</td>
+                        <td><Button bsStyle="info" onClick={onEdit}>Edit</Button></td>
+                        <td><Button bsStyle="danger" onClick={onDelete}>Delete</Button></td>
+                    </tr>)
+            })}
+            </tbody>
+        </Table>
     )
-}
+};
 
-export default CandidateDashboard;
+export default withToJS(CandidateDashboard);
