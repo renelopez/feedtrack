@@ -15,13 +15,19 @@ class CandidateDashboardContainer extends React.Component{
         this.fetchData();
     }
 
+    onEdit(candidate){
+        console.log("Im Editissng");
+    }
+
     fetchData(){
         this.props.actions.loadCandidates();
     }
 
     render(){
         return(
-            <CandidateDashboardPresentation candidates={this.props.candidates}/>
+            <CandidateDashboardPresentation candidates={this.props.candidates}
+                                            onCreate={this.onCreate}
+                                            onEdit={this.onEdit} onDelete={this.onDelete}/>
         )
     }
 }

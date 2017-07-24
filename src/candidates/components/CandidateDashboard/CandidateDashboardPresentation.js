@@ -1,6 +1,7 @@
 import React from 'react';
 import {Table,Button} from 'react-bootstrap';
 import {withToJS} from '../../../hoc/withToJS';
+import {Link} from 'react-router-dom'
 
 const CandidateDashboard = ({candidates,onCreate,onEdit,onDelete}) => {
     return(
@@ -20,7 +21,7 @@ const CandidateDashboard = ({candidates,onCreate,onEdit,onDelete}) => {
                         <td>{candidate.id}</td>
                         <td>{candidate.name}</td>
                         <td>{candidate.description}</td>
-                        <td><Button bsStyle="info" onClick={onEdit}>Edit</Button></td>
+                        <td><Link to={'/candidates/'+candidate.id} className="btn btn-info" >Edit</Link></td>
                         <td><Button bsStyle="danger" onClick={onDelete}>Delete</Button></td>
                     </tr>)
             })}

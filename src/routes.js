@@ -5,6 +5,7 @@ import {
 
 import FeedbackDashboard from './feedbacks/FeedbackDashboard/FeedbackDashboard';
 import CandidateDashboardContainer from './candidates/components/CandidateDashboard/CandidateDashboardContainer';
+import ManageCandidateContainer from './candidates/components/ManageCandidate/ManageCandidateContainer';
 import withRouter from './hoc/withRouter';
 import withLayout from './hoc/withLayout';
 //
@@ -13,11 +14,16 @@ export const Routes = props => (
         <div className="app">
             <Route path="/" exact
                    component={FeedbackDashboard} />
-            <Route path="/candidates"
+            <Route path="/candidates" exact
                    render={(renderProps) => (
                        <CandidateDashboardContainer {...props} {...renderProps} />
                    )} />
+            <Route path="/candidates/:candidateId" exact
+                   render={(renderProps) => (
+                       <ManageCandidateContainer {...props} {...renderProps} />
+                   )}
+            />
         </div>
 );
 
-export default withLayout(withRouter(Routes));
+export default withLayout(Routes);

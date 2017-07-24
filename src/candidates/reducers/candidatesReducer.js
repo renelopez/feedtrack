@@ -4,7 +4,6 @@ import Immutable from 'immutable';
 const candidates = function(state=Immutable.List(), action) {
     switch(action.type) {
         case types.LOAD_CANDIDATES_SUCCESS:
-            debugger;
             //state.set('candidates',action.response);
             return Immutable.fromJS(action.response);
             break;
