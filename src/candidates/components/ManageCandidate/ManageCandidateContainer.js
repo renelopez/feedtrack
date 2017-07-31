@@ -9,6 +9,8 @@ class ManageCandidateContainer extends React.Component {
         super(props, context);
     }
 
+
+
     render() {
         return (
             <ManageCandidatePresentation
@@ -25,14 +27,15 @@ ManageCandidateContainer.PropTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
+    let candidate=getCandidateSelector(state);
     return {
-        state: state
+        candidate: candidate
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-       // actions: bindActionCreators(actions, dispatch)
+        actions: bindActionCreators(actions, dispatch)
     }
 }
 

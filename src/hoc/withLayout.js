@@ -38,7 +38,7 @@ export const withLayout = Wrapped => props => {
                             </Navbar.Collapse>
                         </Navbar>
                     </div>
-                    <div className="content">
+                    <div className="container-fluid">
                         <Wrapped {...props} />
                     </div>
                     <div className="footer"></div>

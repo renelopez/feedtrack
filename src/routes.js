@@ -6,7 +6,6 @@ import {
 import FeedbackDashboard from './feedbacks/FeedbackDashboard/FeedbackDashboard';
 import CandidateDashboardContainer from './candidates/components/CandidateDashboard/CandidateDashboardContainer';
 import ManageCandidateContainer from './candidates/components/ManageCandidate/ManageCandidateContainer';
-import withRouter from './hoc/withRouter';
 import withLayout from './hoc/withLayout';
 //
 
